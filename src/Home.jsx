@@ -3,6 +3,7 @@ import axios from "axios";
 import { PostsIndex } from "./PostsIndex";
 import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
+import { Signup } from "./Signup";
 
 export function Home() {
   const [posts, setPosts] = useState([]);
@@ -29,6 +30,7 @@ export function Home() {
 
   return (
     <div>
+      <Signup />
       <PostsIndex posts={posts} onSelectPost={handleShowPost} />
       <Modal show={isPostShowVisable} onClose={handleHidePost}>
         <PostsShow post={currentPost} />
