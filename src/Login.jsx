@@ -10,16 +10,17 @@ export function Login() {
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (event) => {
-    event.preventDafault();
+    event.preventDefault();
+    setErrors([]);
     const params = new FormData(event.target);
     axios
       .post("http://localhost:3000/sessions", params)
       .then((response) => {
         console.log(response.data);
-        axios.defaults.headers.common["Authorization"] = "Bearer" + response.data.jwt;
+        axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
         localStorage.setItem("jwt", response.data.jwt);
         event.target.reset();
-        window.location.href = "/";
+        window.location.href = "/"; // Change this to hide a modal, redirect to a specific page, etc.
       })
       .catch((error) => {
         console.log(error.response);

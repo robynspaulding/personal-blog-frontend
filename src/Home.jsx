@@ -5,6 +5,7 @@ import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { PostsNew } from "./PostsNew";
 
 export function Home() {
   const [posts, setPosts] = useState([]);
@@ -27,12 +28,20 @@ export function Home() {
     setIsPostShowVisable(false);
   };
 
+  const handleCreatePost = (params) => {
+    axios.post("http://localhost:3000/posts.json", params).then((response) => {
+      const newPost = response.data;
+      setPosts([...posts, newPost]);
+    });
+  };
+
   useEffect(handleIndexPosts, []);
 
   return (
     <div>
       <Signup />
       <Login />
+      <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onSelectPost={handleShowPost} />
       <Modal show={isPostShowVisable} onClose={handleHidePost}>
         <PostsShow post={currentPost} />
