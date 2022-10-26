@@ -63,13 +63,13 @@ export function Home() {
 
   return (
     <div>
-      <Signup />
-      <Login />
       <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onSelectPost={handleShowPost} />
       <Modal show={isPostShowVisable} onClose={handleHidePost}>
         <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
       </Modal>
+      <Signup />
+      <Login />
     </div>
   );
 }
