@@ -20,7 +20,7 @@ export function PostsNew() {
     <div id="post-new">
       <h1>New Post</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div class="form-group">
           Title: <input type="text" name="title" />
         </div>
         <div>
