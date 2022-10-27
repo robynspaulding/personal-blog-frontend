@@ -28,13 +28,6 @@ export function Home() {
     setIsPostShowVisable(false);
   };
 
-  const handleCreatePost = (params) => {
-    axios.post("http://localhost:3000/posts.json", params).then((response) => {
-      const newPost = response.data;
-      setPosts([...posts, newPost]);
-    });
-  };
-
   const handleUpdatePost = (id, params) => {
     axios.patch("http://localhost:3000/posts/" + id + ".json", params).then((response) => {
       const updatedPost = response.data;
@@ -63,13 +56,10 @@ export function Home() {
 
   return (
     <div>
-      <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onSelectPost={handleShowPost} />
       <Modal show={isPostShowVisable} onClose={handleHidePost}>
         <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
       </Modal>
-      <Signup />
-      <Login />
     </div>
   );
 }
