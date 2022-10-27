@@ -21,21 +21,26 @@ export function Header() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-link">
-              <LogoutLink />
-            </li>
             <li class="nav-link active" aria-current="page">
               <Link to="/">All Posts</Link>
             </li>
             <li class="nav-link active" aria-current="new">
               <Link to="/posts/new">New Post</Link>
             </li>
-            <li class="nav-link active" aria-current="new">
-              <Link to="/signup">Signup</Link>
-            </li>
-            <li class="nav-link active" aria-current="new">
-              <Link to="/login">Login</Link>
-            </li>
+            {localStorage.jwt === undefined ? (
+              <>
+                <li class="nav-link active" aria-current="new">
+                  <Link to="/signup">Signup</Link>
+                </li>
+                <li class="nav-link active" aria-current="new">
+                  <Link to="/login">Login</Link>
+                </li>
+              </>
+            ) : (
+              <li class="nav-link">
+                <LogoutLink />
+              </li>
+            )}
           </ul>
         </div>
       </div>
