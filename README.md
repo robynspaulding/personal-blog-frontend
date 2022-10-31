@@ -5,12 +5,12 @@
 * [Setup](#setup)
 
 ## General info
-This project is a simple blog web app that allows users to Signup, Login, Create, Edit and Delete a Post (while logged in) and Logout. In the future I'd like to add a comments section and like button. 
+This project is a simple blog web app that allows users to Signup, Login, Create, Edit and Delete a Post (while logged in) and Logout through accessing the <a href="https://github.com/robynspaulding/personal-blog-api">Rails backend</a>. In the future I'd like to add a comments section and like button. 
 	
 ## Technologies
 Project is created with:
 * React.js
-* Ruby on Rails (backend API)
+* Ruby on Rails backend
 * Bootstrap
 	
 ## Setup
