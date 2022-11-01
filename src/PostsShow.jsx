@@ -19,7 +19,9 @@ export function PostsShow(props) {
       <p>{props.post.body}</p>
 
       <div>
-        <button onClick={handleClick}>Delete Post</button>
+        <button className="btn btn-info" onClick={handleClick}>
+          Delete Post
+        </button>
       </div>
       <h1>Update Post</h1>
       <form onSubmit={handleSubmit}>
@@ -35,7 +37,9 @@ export function PostsShow(props) {
         <div>
           Image url: <input type="text" name="image" defaultValue={props.post.image} />
         </div>
-        <button type="submit">Update Post</button>
+        <button className="btn btn-info" type="submit">
+          Update Post
+        </button>
       </form>
     </div>
   );

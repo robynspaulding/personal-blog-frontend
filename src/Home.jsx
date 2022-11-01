@@ -3,9 +3,6 @@ import axios from "axios";
 import { PostsIndex } from "./PostsIndex";
 import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
-import { Signup } from "./Signup";
-import { Login } from "./Login";
-import { PostsNew } from "./PostsNew";
 
 export function Home() {
   const [posts, setPosts] = useState([]);

@@ -17,22 +17,28 @@ export function PostsNew() {
     event.target.reset();
   };
   return (
-    <div id="post-new">
+    <div className="card-new" id="post-new">
       <h1>New Post</h1>
       <form onSubmit={handleSubmit}>
-        <div class="form-group">
+        <div className="card-body" class="form-group">
           Title: <input type="text" name="title" />
         </div>
         <div>
           Date: <input type="text" name="date" />
         </div>
         <div>
-          Body: <input type="text" name="body" />
-        </div>
-        <div>
           Image Url: <input type="text" name="image" />
         </div>
-        <button type="submit">Create Post</button>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">
+            Body:
+          </label>
+          <textarea input type="text" name="body" class="form-control" id="text-body" rows="3"></textarea>
+        </div>
+
+        <button className="btn btn-info" type="submit">
+          Create Post
+        </button>
       </form>
     </div>
   );
