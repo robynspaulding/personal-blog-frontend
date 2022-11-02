@@ -31,8 +31,19 @@ export function PostsShow(props) {
         <div>
           Date: <input type="text" name="date" defaultValue={props.post.date} />
         </div>
-        <div>
-          Body: <input type="text" name="body" defaultValue={props.post.body} />
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">
+            Body:
+          </label>
+          <textarea
+            input
+            type="text"
+            name="body"
+            class="form-control"
+            id="text-body"
+            defaultValue={props.post.body}
+            rows="3"
+          ></textarea>
         </div>
         <div>
           Image url: <input type="text" name="image" defaultValue={props.post.image} />
