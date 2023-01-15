@@ -29,9 +29,6 @@ export function PostsNew() {
               Title: <input type="text" name="title" />
             </div>
             <div>
-              Date: <input type="text" name="date" />
-            </div>
-            <div>
               Image Url: <input type="text" name="image" />
             </div>
             <div class="mb-3">

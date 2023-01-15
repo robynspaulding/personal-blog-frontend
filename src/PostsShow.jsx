@@ -14,25 +14,19 @@ export function PostsShow(props) {
     <div id="posts-show">
       <h1>Post Info</h1>
       <img src={props.post.image} />
-      <h3> {props.post.title}</h3>
-      <p>{props.post.date}</p>
-      <p>{props.post.body}</p>
+
       {localStorage.jwt === undefined ? (
-        <></>
+        <>
+          <h3> {props.post.title}</h3>
+          <p>{props.post.date}</p>
+          <p>{props.post.body}</p>
+        </>
       ) : (
         <>
-          <div>
-            <button className="btn btn-info" onClick={handleClick}>
-              Delete Post
-            </button>
-          </div>
           <h1>Update Post</h1>
           <form onSubmit={handleSubmit}>
             <div>
               Title: <input type="text" name="title" defaultValue={props.post.title} />
-            </div>
-            <div>
-              Date: <input type="text" name="date" defaultValue={props.post.date} />
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">
@@ -45,7 +39,7 @@ export function PostsShow(props) {
                 class="form-control"
                 id="text-body"
                 defaultValue={props.post.body}
-                rows="3"
+                rows="10"
               ></textarea>
             </div>
             <div>
@@ -55,6 +49,12 @@ export function PostsShow(props) {
               Update Post
             </button>
           </form>
+          <div>OR</div>
+          <div>
+            <button className="btn btn-outline-danger" onClick={handleClick}>
+              Delete Post
+            </button>
+          </div>
         </>
       )}
     </div>

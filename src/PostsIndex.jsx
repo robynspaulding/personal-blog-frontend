@@ -13,7 +13,7 @@ export function PostsIndex(props) {
           <div className="card-post" style={{ width: "18rem" }} key={post.id}>
             <h2 className="card-title">{post.title}</h2>
             <img src={post.image} className="card-img-top" alt={post.title} />
-            <p className="card-body">Date: {post.date}</p>
+            <p className="card-body"> {post.date}</p>
             <button className="btn btn-info" onClick={() => props.onSelectPost(post)}>
               More info
             </button>
@@ -21,4 +21,4 @@ export function PostsIndex(props) {
         ))}
     </div>
   );
-} 
+}

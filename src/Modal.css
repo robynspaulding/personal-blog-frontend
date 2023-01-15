@@ -12,12 +12,13 @@
 .modal-main {
   position: fixed;
   background: whitesmoke;
-  width: 80%;
-  height: auto;
+  width: 90%;
+  height: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1em;
+  align-content: center;
 }
 
 .modal-main button.close {

@@ -3,6 +3,7 @@ html {
 }
 #root {
   background-image: url('./assets/double-bubble-outline.webp');
+  padding: 5%;
 }
 
 .card img {
