@@ -9,9 +9,9 @@ This project is a simple blog web app that allows users to Signup, Login, Create
 	
 ## Technologies
 Project is created with:
-* React.js
-* Ruby on Rails backend
-* Bootstrap
+* React.js - This Repo
+* <a href="https://github.com/robynspaulding/personal-blog-api"> Ruby on Rails Backend Repo</a>
+* Bootstrap styling resources
 	
 ## Setup
 Clone this repo to the file you choose your desktop and run npm install to install all the dependencies.
@@ -23,4 +23,4 @@ $ npm install
 ```
 
 ## Usage
-Use this platform to post your own blogs and/or images!
+Use this platform to post blogs with images!
