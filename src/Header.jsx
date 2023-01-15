@@ -24,9 +24,7 @@ export function Header() {
             <li class="nav-link active" aria-current="page">
               <Link to="/">All Posts</Link>
             </li>
-            <li class="nav-link active" aria-current="new">
-              <Link to="/posts/new">New Post</Link>
-            </li>
+
             {localStorage.jwt === undefined ? (
               <>
                 <li class="nav-link active" aria-current="new">
@@ -37,9 +35,14 @@ export function Header() {
                 </li>
               </>
             ) : (
-              <li class="nav-link">
-                <LogoutLink />
-              </li>
+              <div>
+                <li class="nav-link active" aria-current="new">
+                  <Link to="/posts/new">New Post</Link>
+                </li>
+                <li class="nav-link">
+                  <LogoutLink />
+                </li>
+              </div>
             )}
           </ul>
         </div>
