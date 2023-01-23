@@ -28,5 +28,5 @@ npm run dev
 
 You'll need to have the backend code <a href="https://github.com/robynspaulding/personal-blog-api">Personal Blog API</a> running on http://localhost:3000.
 
-## Usage
+
 Use this platform to post blogs with images!
