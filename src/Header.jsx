@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export function Header() {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          Robyn Spaulding
+          Thoughts and Things
         </a>
         <button
           class="navbar-toggler"
@@ -22,27 +22,39 @@ export function Header() {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-link active" aria-current="page">
-              <Link to="/">All Posts</Link>
+              <Link to="/">
+                <button type="submit" class="btn btn-light">
+                  All Posts
+                </button>
+              </Link>
             </li>
 
             {localStorage.jwt === undefined ? (
               <>
                 <li class="nav-link active" aria-current="new">
-                  <Link to="/signup">Signup</Link>
+                  <Link to="/signup">
+                    <button type="submit" class="btn btn-light">
+                      Sign Up
+                    </button>
+                  </Link>
                 </li>
                 <li class="nav-link active" aria-current="new">
-                  <Link to="/login">Login</Link>
+                  <Link to="/login">
+                    <button type="submit" class="btn btn-light">
+                      Login
+                    </button>
+                  </Link>
                 </li>
               </>
             ) : (
-              <div>
+              <>
                 <li class="nav-link active" aria-current="new">
                   <Link to="/posts/new">New Post</Link>
                 </li>
                 <li class="nav-link">
                   <LogoutLink />
                 </li>
-              </div>
+              </>
             )}
           </ul>
         </div>
