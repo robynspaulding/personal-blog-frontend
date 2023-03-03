@@ -38,7 +38,7 @@ export function PostsNew() {
               <textarea input type="text" name="body" class="form-control" id="text-body" rows="3"></textarea>
             </div>
 
-            <button className="btn btn-info" type="submit">
+            <button className="btn btn-outline-success" type="submit">
               Create Post
             </button>
           </form>

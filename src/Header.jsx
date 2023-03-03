@@ -49,7 +49,11 @@ export function Header() {
             ) : (
               <>
                 <li class="nav-link active" aria-current="new">
-                  <Link to="/posts/new">New Post</Link>
+                  <Link to="/posts/new">
+                    <button type="submit" class="btn btn-light">
+                      New Post
+                    </button>
+                  </Link>
                 </li>
                 <li class="nav-link">
                   <LogoutLink />

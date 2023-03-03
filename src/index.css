@@ -1,9 +1,11 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
+
 }
-#root {
+body {
   background-image: url('./assets/double-bubble-outline.webp');
-  padding: 5%;
+  padding: 1%;
 }
 
 .card img {
